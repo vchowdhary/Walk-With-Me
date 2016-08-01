@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
 
     <!-- Sets initial viewport load and disables zooming  -->
@@ -9,20 +9,26 @@
     <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Include the compiled Ratchet CSS -->
+	
+<!-- Include the compiled Ratchet CSS -->
     <link href="ratchet.css" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="functions.js"></script>
 
-    <!-- Include the compiled Ratchet JS -->
-    <script src="ratchet.js"></script>
+  <!-- Include the compiled Ratchet JS -->
+  <script src="ratchet.js"></script>
   </head>
-  <body>
+<body>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-      
-       
+    <p id="tips_text"> Check yourself before you rek yourself. </p>
+  	<img id = "logo-page" src="www.png" width="213" height="213" alt=""> 
+	<button class="btn" id="start-button"> 
+    Start <a class="navigate-right" href="login.html" data-transition="slide-in"> Start</a>
+	</button>
     </div>
+    
 
-  </body>
+</body>
 </html>
