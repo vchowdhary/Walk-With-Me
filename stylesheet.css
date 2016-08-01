@@ -1,3 +1,26 @@
 @charset "utf-8";
 /* CSS Document */
-
+/*Cerulean - #4484CE
+Aluminum - #D9D9D9
+Light - #F9CF00
+Tangerine - #F19F4D*/
+#logo-page{
+	position: absolute;
+	top: 15%;
+	left: 22%;	
+	
+}
+#start-button{
+	position: absolute;
+	padding: 15px 60px 14px;	
+	top: 80%;
+	left: 30%;
+	background-color: #4484CE;
+	color: white;
+}
+#tips_text{
+	position: absolute;
+	top:60%;
+	left:20%;
+	text-wrap:normal;
+}
