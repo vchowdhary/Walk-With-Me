@@ -59,6 +59,19 @@ body {
     font-size: 36px !important;
     margin-left: 50px;
 }
+.friends{
+	position: absolute;
+	top: 0;
+	right: 25;
+	font-size: 42px !important;
+	margin-left:-20px;
+}
+.alone{
+	position: absolute;
+	top: 0;
+	right: 25;
+	font-size: 48px !important;
+	margin-left: 30px;
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -67,13 +80,15 @@ body {
 </style>
 <body>
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="javascript:void(0)" class="friends" onclick="closeNav()">+</a>
+  <a href="javascript:void(0)" class="alone" onclick="closeNav()">-</a>
 <ul class="table-view">
   <li class="table-view-cell media">
     <a class="navigate-right">
-      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <img class="media-object pull-left" src="mm.png" width="60" hight="60">
       <div class="media-body">
-        Marlika Marcaeu
+        Marlika Marceau
         <p>Location: Miami, FL</p>
       </div>
     </a>
@@ -89,16 +104,43 @@ body {
   </li>
   <li class="table-view-cell media">
     <a class="navigate-right">
-      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <img class="media-object pull-left" src="vc.png" width="60" hight="60">
       <div class="media-body">
         Vanshika Chowdhary
         <p>Location: Westborough, MA</p>
       </div>
     </a>
   </li>
-</ul>
-</div>
-
+<li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="mh.png" width="60" hight="60">
+      <div class="media-body">
+        Meagan Hiatt
+        <p>Location: 255 Main Street, Boston MA</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="jh.png" width="60" hight="60">
+      <div class="media-body">
+        Jazz Hyppolite
+        <p>Location: Lincoln, RI</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="cs.png" width="60" hight="60">
+      <div class="media-body">
+        Crytal Seo
+        <p>Location: Lowell, MA</p>
+      </div>
+    </a>
+  </li>
+ 
+ </ul>
+ </div>
 <!--
 <h2>Animated Sidenav Example</h2>
 <p>Click on the element below to open the side navigation menu.</p>-->
