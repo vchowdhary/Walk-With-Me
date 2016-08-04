@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Map</title>
+      <style> 
+        #map {
+        height:76%;
+		width:100%;
+		margin-top:95px;
+		margin-bottom:115px;
+		text-align:center;
+		border-color:#A1CBB1;
+		border-width:thick;
+		}
+      </style>
+        <link rel="stylesheet" href="../../ratchet-2.0.2/ratchet-2.0.2/dist/css/ratchet.min.css">
+        <link rel="stylesheet" href="../../ratchet-2.0.2/ratchet-2.0.2/dist/css/ratchet-theme-ios.min.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="../../../../bodyapp.css">
+        <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">
+        <script src="../../ratchet-2.0.2/ratchet-2.0.2/dist/js/ratchet.min.js"></script>
+  	
+   <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="../../../../ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="../../../../ratchet.js"></script>
+  </head>
+    
+    <body>
+        
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title"></h1>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    
+    <div id="map"></div>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+
+      function initMap() {
+		    // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };	
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: pos,
+          zoom: 18
+        });
+		var image = 'https://github.com/vchowdhary/Walk-With-Me/blob/master/eep.png';
+        var ehhMarker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          icon: image,
+        });
+
+			
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    </script>
+  </body>
+</html>
+	
