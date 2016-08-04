@@ -35,15 +35,53 @@
       <form class="input-group" id="login_form">
           <div class="input-row">
             <label class="login-label"> Email</label>
-            <input type="email" placeholder="unoriginaljanedoe@gmail.com">
+            <input id="user-email" type="email" placeholder="unoriginaljanedoe@gmail.com">
           </div>
           <div class="input-row">
             <label class="login-label">Password</label>
-            <input type="email" placeholder="unoriginal password">
+            <input id="user-password" type="password" placeholder="unoriginal password">
           </div>
-          <a href = "../map.html" class="btn btn-positive" id="done" data-transition="slide-in"> Done </a>
+          <a class="btn btn-positive" id="done" onClick="checkLogin()"> Done </a>
+          <script>
+						function checkLogin(){
+				var email = document.getElementById("user-email").value;
+				var password = document.getElementById("user-password").value;
+				var CORRECT_EMAIL = "walkwithme@girlswhocode.com";
+				var CORRECT_PASSWORD = "vanerama";
+				var done = document.getElementById("done");
+				if(email!==null){
+					if(password!==null){
+						done.style.cursor="pointer";
+						done.style.opacity="1";
+					}
+					else{
+						alert("Password cannot be blank!");	
+					}
+				}
+				else{
+					alert("Email cannot be blank!");	
+					
+				}
+				
+				if(email===CORRECT_EMAIL)
+				{
+					if(password===CORRECT_PASSWORD){
+						done.style.opacity="1";
+						PUSH({url: 'map.html', transition: 'slide-in'});
+					}
+					else{
+					alert("Incorrect password, try again!");	
+					}
+				}
+				else{
+					alert("Incorrect email, try again!");	
+					console.log(email);
+				}
+			}
+		  </script>
 	</form>
-    <a href="../index.html" class="links" id="forgot_password" data-transition:"slide-in">Forgot Password?</a><style>
+    <a href="../index.html" class="links" id="forgot_password" data-transition:"slide-in">Forgot Password?</a>
+	<style>
 	.links:visited {color:gray; background-color:transparent; text-decoration:none}
     .links:hover   {color:black; background-color:transparent; text-decoration:underline}
     </style>
@@ -53,7 +91,7 @@
     <a href = "http://www.gmail.com" class="links" id="google-text" data-transition="slide-in"> Connect with Google </a>
    <div id="remember">
    	<h id="remember-text"> Remember me </h>
-    <input type="checkbox"/>
+    <input id="remember-check" type="checkbox"/>
    </div>
     </div>
     
