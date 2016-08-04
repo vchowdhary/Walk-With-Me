@@ -4,23 +4,179 @@
 Aluminum - #D9D9D9
 Light - #F9CF00
 Tangerine - #F19F4D*/
+@font-face {
+	font-family: cool_font;
+	src: url('NymphsHandwriting.ttf');
+}
 #logo-page{
-	position: absolute;
-	top: 15%;
-	left: 22%;	
+	position: relative;
+	top: 10%;
+	 margin-left: auto;
+     display: block;
+	 margin-right: auto;
+	
+}
+#title{
+	font-family: cool_font;
+	font-size: 60px;
+	top:350px;
+	margin-left: auto;
+     display: block;
+	 margin-right: auto;
+	position: relative;
+	text-align: center;
+	color: #00408E;
+	text-shadow: 2px 2px #96A9B8;
+	
 	
 }
 #start-button{
 	position: absolute;
 	padding: 15px 60px 14px;	
-	top: 80%;
-	left: 30%;
-	background-color: #4484CE;
+	left: 27%;
+	margin-top: 60%;
+	background-color: #F19F4D;
 	color: white;
+	font-size: 16px;
 }
-#tips_text{
-	position: absolute;
-	top:60%;
-	left:20%;
+
+#tipstext{
+	position: relative;
+	top: 410px;
+	letter-spacing: 2px;
 	text-wrap:normal;
+	text-align: center;
+	margin-left: auto;
+    display: block;
+	 margin-right: auto;
+	 color:#586F8E;
 }
+
+#logo-page2{
+	position: relative;
+	top: 10px;
+	 margin-left: auto;
+     display: block;
+	 margin-right: auto;
+}
+	
+#login_form{
+	margin-left: auto;
+     display: block;
+	 margin-right: auto;
+	position: relative;
+	top:20px;	
+	border: #D9D9D9;
+}
+
+#done{
+	position: absolute;
+	padding: 15px 60px 14px;	
+	left: 27%;
+	margin-top: 60%;
+	color: white;
+	font-size: 16px;
+	background-color: #4484CE;
+	border: #4484CE;
+	
+}
+#forgot_password{
+	position: relative;
+	text-wrap:normal;
+	text-align: center;
+	margin-left: auto;
+    display: block;
+	font-size: 16px;
+	margin-right: auto;
+	letter-spacing: 1px;
+	margin-top: 8%;
+}
+#facebook{
+	position: relative;
+	margin-top: 5%;
+	text-wrap:normal;
+	text-align: center;
+	margin-left: 12%;
+    display: block;
+	
+}
+#facebook-text{
+	position: relative;
+	text-wrap:normal;
+	text-align: center;
+	margin-left: 30px;
+	top:-118px;
+	margin-bottom: 60px;
+    display: block;
+}
+#google{
+	position: relative;
+	margin-top:25px;
+	text-wrap:normal;
+	text-align: center;
+	margin-left: 11%;
+    display: block;
+}
+#google-text{
+	position: relative;
+	text-wrap:normal;
+	text-align: center;
+	margin-left: 10px;
+    display: block;
+	top:-118px;
+}
+.login-label{
+	color:#F19F4D;
+}
+#login-background{
+	background: #D9D9D9; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, rgba(217,217,217,0),rgba(217,217,217,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom, rgba(217,217,217,0),rgba(217,217,217,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom, rgba(217,217,217,0),rgba(217,217,217,1)); /*Fx 3.6-15*/
+  background: linear-gradient(white, #BADCF8); /*Standard*/
+}
+
+#index-background{
+	background: #D9D9D9; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, rgba(217,217,217,0),rgba(217,217,217,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom, rgba(217,217,217,0),rgba(217,217,217,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom, rgba(217,217,217,0),rgba(217,217,217,1)); /*Fx 3.6-15*/
+  background: linear-gradient(white, #71E6FF); /*Standard*/
+}
+#apply-btn{
+	position: relative;
+	padding: 15px 60px 14px;
+	margin-top:20px;
+	font-size: 14px;
+	margin-bottom: 20px;
+	left:30%;
+}
+#sign-out-btn{
+	position: absolute;
+	padding: 15px 60px 14px;
+	margin-top:90px;
+	font-size:14px;
+	margin-bottom: 20px;
+	left:28%;
+}
+#remember-text{
+	position: relative;
+	font-size:13px;
+	color: gray;
+		
+}
+#remember{
+	position: absolute;
+	top:44%;
+	margin-left: 3%;
+}
+@-moz-keyframes
+fade-it { 0% {
+opacity:0
+}
+100% {
+opacity:1
+07
+}
+}
+
