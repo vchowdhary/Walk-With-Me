@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="dist/css/ratchet.min.css">
+    <link rel="stylesheet" href="dist/css/ratchet-theme-ios.min.css">
+    <link rel="stylesheet" href="dist/css/app.css">
+       <script src="ratchet.min.js"></script>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="dist/css/ratchet.css" rel="stylesheet" type="text/css">
+    <script src="functions.js"></script>
+
+  <!-- Include the compiled Ratchet JS -->
+  <script src="dist/js/ratchet.js"></script>
+	  <style>
+       .sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #4484CE;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 75px;
+	}
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #f1f1f1;
+		display: block;
+		transition: 0.3s
+	}
+	.sidenav a:hover, .offcanvas a:focus{
+		color: #F19F4D;
+	}
+	.closebtn {
+		position: absolute;
+		top: 5.5%;
+		right: 25px;
+		font-size: 32px !important;
+		margin-left: 50px;
+	}
+	.friends{
+		position: absolute;
+		top: 6%;
+		right: 25;
+		font-size: 32px !important;
+		margin-left:-20px;
+	}
+	.alone{
+		position: absolute;
+		top: 5.5%;
+		right: 25;
+		font-size: 48px !important;
+		margin-left: 30px;
+	@media screen and (max-height: 450px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	}
+        </style>
+  </head>
+<body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title">Panic</h1>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><span class="icon icon-person" id="friends"></span></span>
+      <nav class="bar bar-tab">
+ 
+      <a class="tab-item" href="map.html" data-transition="slide-in">
+        <img src="mapz.png" alt="panic" width="30" class="media-object" hight="60">
+      </a>
+       <a class="tab-item active" href="panic.html" data-transition="slide-in">
+        <img src="aesthetic.png" alt="panic" width="90" class="media-object" hight="60">
+      </a>
+      <a class="tab-item" href="settings.html" data-transition="slide-in">
+        <img src="hearmegear.png" alt="panic" width="30" class="media-object" hight="60">
+      </a>
+	</nav>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+      <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="javascript:void(0)" class="friends" onclick="closeNav()">+</a>
+  <a href="javascript:void(0)" class="alone" onclick="closeNav()">-</a>
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="mm.png" width="60" hight="60">
+      <div class="media-body">
+        Marlika Marceau
+        <p>Location: Miami, FL</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="ehh.png" width="60" hight="60">
+      <div class="media-body">
+        Rayna Mishra
+        <p>Location: Barrington, RI</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="vc.png" width="60" hight="60">
+      <div class="media-body">
+        Vanshika Chowdhary
+        <p>Location: Westborough, MA</p>
+      </div>
+    </a>
+  </li>
+<li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="mh.png" width="60" hight="60">
+      <div class="media-body">
+        Meagan Hiatt
+        <p>Location: 255 Main Street, Boston MA</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="jh.png" width="60" hight="60">
+      <div class="media-body">
+        Jazz Hyppolite
+        <p>Location: Lincoln, RI</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="cs.png" width="60" hight="60">
+      <div class="media-body">
+        Crytal Seo
+        <p>Location: Lowell, MA</p>
+      </div>
+    </a>
+  </li>
+ 
+ </ul>
+ <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+    </div>
+    
+  </body>
+</html>
+
+

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="dist/css/ratchet.min.css">
+    <link rel="stylesheet" href="dist/css/ratchet-theme-ios.min.css">
+    <link rel="stylesheet" href="dist/css/app.css">
+       <script src="ratchet.min.js"></script>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="dist/css/ratchet.css" rel="stylesheet" type="text/css">
+    <script src="functions.js"></script>
+
+  <!-- Include the compiled Ratchet JS -->
+  <script src="dist/js/ratchet.js"></script>
+  </head>
+<body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title">Settings</h1>
+       <a href="map.html" class="icon icon-left-nav" data-transition="slide-out"></a>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+      <ul class="table-view">
+      <li class="table-view-divider">Preferences</li>
+  <li class="table-view-cell">
+    Enable notifications
+    <div class="toggle active">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Notify police automatically when panic button pressed
+    <div class="toggle">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li class="table-view-cell" style="text-wrap:normal">
+    Send text alert to friends if panic button pressed
+    <div class="toggle">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Enable tips
+    <div class="toggle active">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Allow Friends to see your location
+    <div class="toggle">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li class="table-view-divider">Account Information</li>
+  <form class="input-group">
+  <div class="input-row">
+    <label>Full name</label>
+    <input type="text" placeholder="Jane Doe">
+  </div>
+  <div class="input-row">
+    <label>Email</label>
+    <input type="email" placeholder="unorginaljanedoe@gmail.com">
+  </div>
+  <div class="input-row">
+    <label>Mobile Phone</label>
+    <input type="text" placeholder="(123) 456-7890">
+  </div>
+</form>
+</ul>
+	<a class="btn btn-positive" id="apply-btn"> Apply </a>
+    <a href="index.html" class="btn btn-negative" id="sign-out-btn" data-transition="slide-out"> Sign Out </a>
+    </div>
+  </body>
+</html>
+
+
