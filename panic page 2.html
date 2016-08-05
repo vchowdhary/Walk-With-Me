@@ -209,7 +209,31 @@
       </div>
     </a>
   </li>
- 
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="cs.png" width="60" hight="60">
+      <div class="media-body">
+        Crytal Seo
+        <p>Location: Lowell, MA</p>
+      </div>
+    </a>
+  </li> <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="cs.png" width="60" hight="60">
+      <div class="media-body">
+        Crytal Seo
+        <p>Location: Lowell, MA</p>
+      </div>
+    </a>
+  </li> <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="cs.png" width="60" hight="60">
+      <div class="media-body">
+        Crytal Seo
+        <p>Location: Lowell, MA</p>
+      </div>
+    </a>
+  </li>
  </ul>
  <script>
 function openNav() {
@@ -223,7 +247,44 @@ function closeNav() {
 
 <a href="tel:+14016606233"><div id="img"><img  src="dapopo.png" alt="Paris" width="200" class="center"></div></a>
 
-<a href="sms://+14016606233?body=I%27m%20in%20trouble.%20Here%20is%20my%20last%20known%20location%3A%20Mattapan, Boston%20if%20I%20don%27t%20contact%20you%20in%2020%20minutes,%20call%20the%20police.%20This%20is%20an%20automated%20message%20from%20Walk%20With%20Me,%20THIS%20IS%20NOT%20A%20PRANK.">Send a SMS message<div id="img2"> <img src="airplane.png" alt="Paris" width="120" class="left"> </div></a>
+<a href="#" onclick="changeHref()">Send a SMS message<div id="img2"> <img src="airplane.png" alt="Paris" width="120" class="left" id="sms"> </div></a>
+<script>
+function changeHref(){
+	//alert("clicked");
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+var sms = document.getElementById("sms");
+if( isMobile.iOS() ) {
+	console.log('iOS');
+	window.location.href="sms:+14016606233&body=I%27m%20in%20trouble.%20Here%20is%20my%20last%20known%20location%3A%20Mattapan, Boston%20if%20I%20don%27t%20contact%20you%20in%2020%20minutes,%20call%20the%20police.%20This%20is%20an%20automated%20message%20from%20Walk%20With%20Me,%20THIS%20IS%20NOT%20A%20PRANK.";
+	console.log(sms.href);
+}
+if( isMobile.Android() ) {
+	console.log('Android');
+	window.location.href="sms:+14016606233?body=I%27m%20in%20trouble.%20Here%20is%20my%20last%20known%20location%3A%20Mattapan, Boston%20if%20I%20don%27t%20contact%20you%20in%2020%20minutes,%20call%20the%20police.%20This%20is%20an%20automated%20message%20from%20Walk%20With%20Me,%20THIS%20IS%20NOT%20A%20PRANK.";
+	console.log(sms.href);
+}
+}
+</script>
+
 
 <a href="tel:+17869733309"><div id="img3"> <img src="phone.png" alt="Paris" width="120" class="left"></div></a>
 
