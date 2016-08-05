@@ -41,9 +41,8 @@
             <label class="login-label">Password</label>
             <input id="user-password" type="password" placeholder="unoriginal password">
           </div>
-          <a class="btn btn-positive" id="done" onClick="checkLogin()"> Done </a>
           <script>
-						function checkLogin(){
+				function checkLogin(){
 				var email = document.getElementById("user-email").value;
 				var password = document.getElementById("user-password").value;
 				var CORRECT_EMAIL = "walkwithme@girlswhocode.com";
@@ -79,8 +78,10 @@
 				}
 			}
 		  </script>
+          <a class="btn btn-positive" id="done" onClick="checkLogin()"> Done </a>
+          
 	</form>
-    <a href="../index.html" class="links" id="forgot_password" data-transition:"slide-in">Forgot Password?</a>
+    <a href="index.html" class="links" id="forgot_password" data-transition:"slide-in">Forgot Password?</a>
 	<style>
 	.links:visited {color:gray; background-color:transparent; text-decoration:none}
     .links:hover   {color:black; background-color:transparent; text-decoration:underline}
